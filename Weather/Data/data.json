@@ -1,0 +1,27 @@
+[
+    {
+        "dayOfWeek":"TUE",
+        "imageName":"cloud.sun.fill",
+        "temperature":74
+    },
+    {
+        "dayOfWeek":"WED",
+        "imageName":"sun.max.fill",
+        "temperature":88
+    },
+    {
+        "dayOfWeek":"THU",
+        "imageName":"wind",
+        "temperature":55
+    },
+    {
+        "dayOfWeek":"FRI",
+        "imageName":"sunset.fill",
+        "temperature":60
+    },
+    {
+        "dayOfWeek":"SAT",
+        "imageName":"snow",
+        "temperature":25
+    }
+]

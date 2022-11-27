@@ -21,7 +21,7 @@ struct ContentView: View {
                 
                 //MARK: VStack for main icon and temperature
                 VStack(spacing: 8) {
-               
+                    
                     MainWeatherStatusView(imageName: isNight ? "moon.stars.fill" : "cloud.sun.fill", temperature: isNight ? 55 : 76)
                     
                 }
@@ -29,23 +29,10 @@ struct ContentView: View {
                 
                 
                 //MARK: HStack for weater by day
-                HStack(spacing: 20) {
+                HStack(spacing: 25) {
                     
-                    WeatherDayView(dayOfWeek: "TUE",
-                                   imageName: "cloud.sun.fill",
-                                   temperature: 76)
-                    WeatherDayView(dayOfWeek: "WED",
-                                   imageName: "sun.max.fill",
-                                   temperature: 70)
-                    WeatherDayView(dayOfWeek: "THU",
-                                   imageName: "wind",
-                                   temperature: 66)
-                    WeatherDayView(dayOfWeek: "FRI",
-                                   imageName: "sunset.fill",
-                                   temperature: 60)
-                    WeatherDayView(dayOfWeek: "SAT",
-                                   imageName: "moon.stars.fill",
-                                   temperature: 55)
+                    WeatherDayView()
+
                 }
                 Spacer()
                 
@@ -65,31 +52,31 @@ struct ContentView: View {
     }
 }
 
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
+}
+
+struct WeatherDayView: View{
     
-    struct WeatherDayView: View {
-        var dayOfWeek:String
-        var imageName:String
-        var temperature:Int
-        
-        var body: some View {
-            VStack(spacing: 10){
-                Text(dayOfWeek)
-                    .font(.system(size: 16, weight: .medium))
-                Image(systemName: imageName)
-                    .renderingMode(.original)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 40, height: 40)
-                Text(String("\(temperature)°"))
-                    .font(.system(size: 28, weight: .medium))
-            }
+    @ObservedObject var model = WeatherDayModel()
+    var body: some View {
+            ForEach(model.weatherDays) { item in
+                VStack {
+                    Text(item.dayOfWeek)
+                        .font(.system(size: 16, weight: .medium))
+                    Image(systemName: item.imageName)
+                        .renderingMode(.original)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 40, height: 40)
+                    Text(String("\(item.temperature)°"))
+                        .font(.system(size: 28, weight: .medium))
+                }
         }
     }
+}
 
 
 struct BackgroundView: View {
@@ -98,7 +85,7 @@ struct BackgroundView: View {
     
     var body: some View {
         LinearGradient(gradient: Gradient(
-                       colors: [isNight ? .black : .blue, isNight ? .gray : Color("lightBlue")]),
+            colors: [isNight ? .black : .blue, isNight ? .gray : Color("lightBlue")]),
                        startPoint: .topLeading,
                        endPoint: .bottomTrailing)
         .edgesIgnoringSafeArea(.all)
