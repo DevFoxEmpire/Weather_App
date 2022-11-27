@@ -11,6 +11,7 @@
 		3D9F417A2933C17500384D90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9F41792933C17500384D90 /* ContentView.swift */; };
 		3D9F417C2933C17600384D90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D9F417B2933C17600384D90 /* Assets.xcassets */; };
 		3D9F417F2933C17600384D90 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D9F417E2933C17600384D90 /* Preview Assets.xcassets */; };
+		3D9F41862933F18100384D90 /* WeatherButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9F41852933F18100384D90 /* WeatherButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		3D9F41792933C17500384D90 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3D9F417B2933C17600384D90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D9F417E2933C17600384D90 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3D9F41852933F18100384D90 /* WeatherButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeatherButton.swift; path = "../../../Learning SwiftUI/Weather_App/Weather/WeatherButton.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				3D9F41792933C17500384D90 /* ContentView.swift */,
 				3D9F417B2933C17600384D90 /* Assets.xcassets */,
 				3D9F417D2933C17600384D90 /* Preview Content */,
+				3D9F41852933F18100384D90 /* WeatherButton.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				3D9F417A2933C17500384D90 /* ContentView.swift in Sources */,
 				3D9F41782933C17500384D90 /* WeatherApp.swift in Sources */,
+				3D9F41862933F18100384D90 /* WeatherButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
